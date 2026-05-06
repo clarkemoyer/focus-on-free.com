@@ -1,11 +1,16 @@
 export default function Home() {
   return (
     <main className="wp-migration consulting">
+      <a className="skip-link" href="#services">
+        Skip to main content
+      </a>
       <header className="site-header">
         <a className="logo text" href="#top">
           Focus on Free
         </a>
+        <p>Your Company&apos;s Independent IT Advocate</p>
         <nav>
+          <a href="#top">Home</a>
           <a href="#services">Services</a>
           <a href="#about">About Us</a>
           <a href="#contact">Contact Us</a>
@@ -17,8 +22,8 @@ export default function Home() {
           <h1>Focus on Free</h1>
           <h2>Your Company&apos;s Independent IT Advocate</h2>
           <p>
-            Focused technology and business consulting for organizations that need an independent
-            advocate.
+            Providing unbiased advice about the current and planned systems your company uses. We
+            provide you with honest feedback, both good and bad.
           </p>
           <a className="button" href="#contact">
             Schedule a Call
@@ -37,10 +42,6 @@ export default function Home() {
               alt="Technology Consulting"
             />
             <h4>Technology Consulting</h4>
-            <p>
-              Independent IT guidance for organizations that need practical advice without vendor
-              pressure.
-            </p>
           </article>
           <article>
             <img
@@ -48,9 +49,6 @@ export default function Home() {
               alt="Location Management"
             />
             <h4>Location Management</h4>
-            <p>
-              Help keeping location listings accurate, consistent, and easier for customers to find.
-            </p>
           </article>
           <article>
             <img
@@ -58,9 +56,6 @@ export default function Home() {
               alt="Reputation Management"
             />
             <h4>Reputation Management</h4>
-            <p>
-              Support monitoring and improving the way your organization appears across the web.
-            </p>
           </article>
           <article>
             <img
@@ -68,10 +63,6 @@ export default function Home() {
               alt="Social Media Management"
             />
             <h4>Social Media Management</h4>
-            <p>
-              Practical planning and management for social channels that support your business
-              goals.
-            </p>
           </article>
         </div>
       </section>
@@ -79,8 +70,16 @@ export default function Home() {
         <div>
           <h3>About Us</h3>
           <p>
-            Focus on Free provides practical guidance around technology consulting, location
-            management, reputation management, and social media management.
+            Focus on Free is an independent IT Consulting firm which helps your company improve its
+            bottom line by aligning you with the lowest cost, if not free, sources first. These
+            include services such as Google My Business Listings, Facebook/LinkedIn, and other
+            common services which companies can use to improve their outreach and engagement.
+          </p>
+          <p>
+            As your company&apos;s independent information technology advocate; Focus on Free
+            provides you with important feedback on how your company is currently operating, both
+            positvely and negatively, and helps you plan and implement systems which engage your
+            customers, improve your profit, and your business run smoothly.
           </p>
         </div>
         <img
@@ -90,7 +89,6 @@ export default function Home() {
       </section>
       <section id="contact" className="contact">
         <h3>Schedule an Appointment</h3>
-        <p>Start with a focused call about your organization and your goals.</p>
         <a className="button" href="mailto:info@focus-on-free.com">
           Contact Us
         </a>
