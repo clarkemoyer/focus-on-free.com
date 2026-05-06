@@ -38,8 +38,8 @@ export default function Home() {
             />
             <h4>Technology Consulting</h4>
             <p>
-              Technology Consulting support for Focus On Free clients, migrated from the live
-              WordPress content into a static Next.js experience.
+              Independent IT guidance for organizations that need practical advice without vendor
+              pressure.
             </p>
           </article>
           <article>
@@ -49,8 +49,7 @@ export default function Home() {
             />
             <h4>Location Management</h4>
             <p>
-              Location Management support for Focus On Free clients, migrated from the live
-              WordPress content into a static Next.js experience.
+              Help keeping location listings accurate, consistent, and easier for customers to find.
             </p>
           </article>
           <article>
@@ -60,8 +59,7 @@ export default function Home() {
             />
             <h4>Reputation Management</h4>
             <p>
-              Reputation Management support for Focus On Free clients, migrated from the live
-              WordPress content into a static Next.js experience.
+              Support monitoring and improving the way your organization appears across the web.
             </p>
           </article>
           <article>
@@ -71,8 +69,8 @@ export default function Home() {
             />
             <h4>Social Media Management</h4>
             <p>
-              Social Media Management support for Focus On Free clients, migrated from the live
-              WordPress content into a static Next.js experience.
+              Practical planning and management for social channels that support your business
+              goals.
             </p>
           </article>
         </div>
