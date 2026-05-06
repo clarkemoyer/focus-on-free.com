@@ -1,162 +1,308 @@
-/* Fonts are now loaded via next/font in layout.tsx for optimal performance */
 @import 'tailwindcss';
-
 :root {
-  /* Brand tokens */
-  --ffc-primary: #2a6682;
-  --ffc-accent: #f58629;
-  --ffc-yellow: #f5c045;
-  --ffc-black: #000000;
-  --ffc-white: #ffffff;
-
-  /* Layout */
-  --ffc-container: 1248px;
-  --ffc-radius-xl: 20px;
+  --accent: #7aa28f;
+  --blue: #243447;
+  --ink: #222;
+  --muted: #666;
+  --paper: #fff;
 }
-
-html,
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
 body {
-  scroll-behavior: smooth !important;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fff;
+  color: var(--ink);
 }
-
-@theme inline {
-  /* Tailwind design tokens mapped to brand variables */
-  --color-primary: var(--ffc-primary);
-  --color-accent: var(--ffc-accent);
-  --color-yellow: var(--ffc-yellow);
-  --color-ink: var(--ffc-black);
-  --color-paper: var(--ffc-white);
-
-  --radius-xl: var(--ffc-radius-xl);
-  --container: var(--ffc-container);
-
-  /* Fonts (provided via next/font and CSS variables on <body>) */
-  --font-serif-display: var(--font-faustina);
-  --font-serif: var(--font-fauna-one);
-  --font-sans: var(--font-lato);
+.site-header {
+  height: 78px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px clamp(18px, 5vw, 72px);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
-
-body {
-  font-family: var(--font-faustina), serif !important;
-  background: var(--color-paper);
-  color: var(--color-ink);
+.logo img {
+  max-height: 54px;
+  max-width: 190px;
+  object-fit: contain;
 }
-#header {
-  font-family: var(--font-open-sans), sans-serif !important;
+.logo.round img {
+  border-radius: 999px;
 }
-#aria-font {
-  font-family: var(--font-open-sans), sans-serif !important;
+.logo.text,
+.wordmark {
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+  text-decoration: none;
 }
-#lato-font {
-  font-family: var(--font-lato), sans-serif !important;
+nav {
+  display: flex;
+  gap: 24px;
 }
-#montserrat-font {
-  font-family: var(--font-montserrat), sans-serif !important;
+nav a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
 }
-#abeezee {
-  font-family: var(--font-open-sans), sans-serif !important;
+button {
+  border: 0;
+  background: var(--accent);
+  color: white;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 24px;
 }
-/* Segoe UI is a system font - use native system font stack for best performance (only used 2x) */
-#segoe-font {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif !important;
-}
-#cinzel {
-  font-family: var(--font-cinzel), serif !important;
-}
-#fauna-font {
-  font-family: var(--font-fauna-one), serif !important;
-}
-#cantata-font {
-  font-family: var(--font-cantata-one), serif !important;
-}
-#raleway-font {
-  font-family: var(--font-raleway), sans-serif !important;
-}
-#courier-font {
-  font-family: ui-monospace, 'Courier New', monospace !important;
-}
-#faustina-font {
-  font-family: var(--font-faustina), serif !important;
-}
-
-/* Screen reader only utility class for accessibility */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
+.hero {
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  padding: 90px clamp(24px, 8vw, 110px);
+  position: relative;
   overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.08)),
+    url('https://focus-on-free.com/wp-content/uploads/2019/05/consulting_1600x800.jpg') center/cover;
+  color: white;
 }
-
-@keyframes fadeTop {
-  0% {
-    opacity: 0;
-    transform: translateY(-30px);
+.management .hero {
+  background:
+    linear-gradient(120deg, rgba(248, 179, 54, 0.94), rgba(248, 179, 54, 0.78)),
+    url('https://focus-on-free.com/wp-content/uploads/2019/05/consulting_1600x800.jpg') center/cover;
+  clip-path: ellipse(125% 96% at 42% 0%);
+}
+.consulting .hero {
+  background:
+    linear-gradient(90deg, rgba(20, 31, 44, 0.72), rgba(20, 31, 44, 0.35)),
+    url('https://focus-on-free.com/wp-content/uploads/2019/05/consulting_1600x800.jpg') center/cover;
+}
+.yoga .hero {
+  background: #f8f2ea;
+  color: #1b1b1b;
+  gap: 48px;
+}
+.yoga .hero img {
+  width: min(480px, 45vw);
+  border-radius: 46% 54% 42% 58%;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.18);
+}
+.hero-copy {
+  max-width: 760px;
+}
+.hero h1 {
+  font-size: clamp(48px, 8vw, 92px);
+  line-height: 1.02;
+  margin: 0 0 18px;
+  font-weight: 300;
+}
+.yoga .hero h1 {
+  font-family: Georgia, serif;
+  font-weight: 400;
+  color: #27201a;
+}
+.hero h2,
+.hero h3 {
+  font-size: clamp(22px, 3vw, 38px);
+  margin: 0 0 18px;
+}
+.hero p {
+  font-size: 20px;
+  line-height: 1.7;
+  max-width: 680px;
+}
+.button {
+  display: inline-block;
+  margin: 18px 12px 0 0;
+  background: #fff;
+  color: #12377d;
+  text-decoration: none;
+  font-weight: 800;
+  padding: 16px 28px;
+  border-radius: 4px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+.button.ghost {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+.button.light {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.section {
+  padding: 90px clamp(24px, 7vw, 100px);
+}
+.section h2 {
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 300;
+  margin: 0 0 26px;
+}
+.section h3 {
+  font-size: 36px;
+}
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+.accordion-list {
+  display: grid;
+  gap: 18px;
+}
+.accordion {
+  background: #f5f8fc;
+  border-radius: 8px;
+  padding: 20px 24px;
+  color: #777;
+}
+.accordion summary {
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+.accordion summary:after {
+  content: '+';
+  background: #e8edf4;
+  border-radius: 999px;
+  width: 28px;
+  height: 28px;
+  text-align: center;
+  color: #777;
+}
+.mini-grid,
+.mission,
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+.mission {
+  grid-template-columns: repeat(3, 1fr);
+}
+.mini-card,
+.mission article,
+.service-grid article {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.07);
+}
+.mini-card h3,
+.mission h3 {
+  font-size: 26px;
+  margin: 0 0 12px;
+  color: var(--accent);
+}
+.blue-band {
+  background: linear-gradient(135deg, var(--blue), #12377d);
+  color: #fff;
+  padding: 110px clamp(24px, 8vw, 110px);
+  position: relative;
+  overflow: hidden;
+}
+.blue-band:after {
+  content: '';
+  position: absolute;
+  right: -80px;
+  top: 40px;
+  width: 380px;
+  height: 280px;
+  background: var(--accent);
+  border-radius: 50% 0 0 50%;
+  opacity: 0.95;
+}
+.blue-band div {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+}
+.blue-band h2 {
+  font-size: clamp(34px, 5vw, 60px);
+  font-weight: 300;
+}
+.feature {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  padding: 90px clamp(24px, 7vw, 100px);
+  background: #faf8f4;
+}
+.feature img,
+.service-grid img {
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+blockquote {
+  font-size: 30px;
+  font-family: Georgia, serif;
+  color: var(--accent);
+}
+.service-grid img {
+  height: 180px;
+  border-radius: 8px 8px 0 0;
+}
+.service-grid article {
+  padding: 0;
+  overflow: hidden;
+}
+.service-grid article h4,
+.service-grid article p {
+  padding: 0 22px;
+}
+.service-grid article p {
+  padding-bottom: 24px;
+}
+.contact {
+  text-align: center;
+  padding: 100px 24px;
+  background: #161616;
+  color: white;
+}
+.contact h2,
+.contact h3 {
+  font-size: clamp(34px, 5vw, 56px);
+  font-weight: 300;
+  margin: 0 0 18px;
+}
+@media (max-width: 800px) {
+  nav {
+    display: none;
   }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
+  .two-col,
+  .feature,
+  .mission,
+  .mini-grid,
+  .service-grid {
+    grid-template-columns: 1fr;
   }
-}
-
-@keyframes fadeLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-30px);
+  .yoga .hero {
+    display: block;
   }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
+  .yoga .hero img {
+    width: 100%;
+    margin-top: 30px;
   }
-}
-
-@keyframes fadeRight {
-  0% {
-    opacity: 0;
-    transform: translateX(30px);
+  .hero {
+    min-height: 620px;
+    padding: 70px 24px;
   }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.animate-fadeTop {
-  animation: fadeTop 1s cubic-bezier(0.77, 0, 0.175, 1) 1;
-}
-
-.animate-fadeLeft {
-  animation: fadeLeft 1s cubic-bezier(0.77, 0, 0.175, 1) 1;
-}
-
-.animate-fadeRight {
-  animation: fadeRight 1s cubic-bezier(0.77, 0, 0.175, 1) 1;
-}
-
-/* Utilities aligned to Figma */
-.ffc-container {
-  max-width: var(--container);
-  margin-inline: auto;
-  padding-inline: 16px;
-}
-
-.clip-diagonal {
-  clip-path: polygon(0 80%, 100% 50%, 100% 100%, 0% 100%);
-}
-
-.ffc-card {
-  @apply bg-paper border-4 rounded-xl shadow;
-}
-
-/* Hide scrollbar globally */
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
-}
-.scrollbar-hide {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
 }
