@@ -38,28 +38,28 @@ export default function Home() {
         <div className="service-grid">
           <article>
             <img
-              src="https://focus-on-free.com/wp-content/uploads/2019/06/BusinessPeopleAnalyzingDataTogetherTeamworkPlanningStartUpNewProject-800x400.jpg"
+              src="/wp-content/uploads/2019/06/BusinessPeopleAnalyzingDataTogetherTeamworkPlanningStartUpNewProject-800x400.jpg"
               alt="Technology Consulting"
             />
             <h4>Technology Consulting</h4>
           </article>
           <article>
             <img
-              src="https://focus-on-free.com/wp-content/uploads/2019/06/LaptopTabletAnalysis-800x400.jpg"
+              src="/wp-content/uploads/2019/06/LaptopTabletAnalysis-800x400.jpg"
               alt="Location Management"
             />
             <h4>Location Management</h4>
           </article>
           <article>
             <img
-              src="https://focus-on-free.com/wp-content/uploads/2019/06/BusinessManHolographicGraphs-800x400.jpg"
+              src="/wp-content/uploads/2019/06/BusinessManHolographicGraphs-800x400.jpg"
               alt="Reputation Management"
             />
             <h4>Reputation Management</h4>
           </article>
           <article>
             <img
-              src="https://focus-on-free.com/wp-content/uploads/2019/06/IconInternetworldhandsbusinessmannetworktechnologyCommunications-800x400.jpg"
+              src="/wp-content/uploads/2019/06/IconInternetworldhandsbusinessmannetworktechnologyCommunications-800x400.jpg"
               alt="Social Media Management"
             />
             <h4>Social Media Management</h4>
@@ -83,7 +83,7 @@ export default function Home() {
           </p>
         </div>
         <img
-          src="https://focus-on-free.com/wp-content/uploads/2019/06/BusinessPeopleAnalyzingDataTogetherTeamworkPlanningStartUpNewProject-800x400.jpg"
+          src="/wp-content/uploads/2019/06/BusinessPeopleAnalyzingDataTogetherTeamworkPlanningStartUpNewProject-800x400.jpg"
           alt="Consulting team"
         />
       </section>
