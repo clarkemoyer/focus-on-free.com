@@ -71,19 +71,19 @@ button {
   overflow: hidden;
   background:
     linear-gradient(rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.08)),
-    url('https://focus-on-free.com/wp-content/uploads/2019/05/consulting_1600x800.jpg') center/cover;
+    url('/wp-content/uploads/2019/05/consulting_1600x800.jpg') center/cover;
   color: white;
 }
 .management .hero {
   background:
     linear-gradient(120deg, rgba(248, 179, 54, 0.94), rgba(248, 179, 54, 0.78)),
-    url('https://focus-on-free.com/wp-content/uploads/2019/05/consulting_1600x800.jpg') center/cover;
+    url('/wp-content/uploads/2019/05/consulting_1600x800.jpg') center/cover;
   clip-path: ellipse(125% 96% at 42% 0%);
 }
 .consulting .hero {
   background:
     linear-gradient(90deg, rgba(20, 31, 44, 0.72), rgba(20, 31, 44, 0.35)),
-    url('https://focus-on-free.com/wp-content/uploads/2019/05/consulting_1600x800.jpg') center/cover;
+    url('/wp-content/uploads/2019/05/consulting_1600x800.jpg') center/cover;
 }
 .yoga .hero {
   background: #f8f2ea;
