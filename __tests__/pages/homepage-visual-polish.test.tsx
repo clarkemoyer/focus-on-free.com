@@ -2,6 +2,14 @@ import { render, screen, within } from '@testing-library/react'
 import Home from '@/app/page'
 
 describe('Focus on Free homepage visual polish', () => {
+  it('makes Book a Walk and Talk the primary hero CTA', () => {
+    render(<Home />)
+
+    expect(screen.getAllByRole('link', { name: /Book a Walk and Talk/i })[0]).toHaveClass('primary')
+    expect(screen.getByRole('link', { name: /Learn About Us/i })).toHaveClass('ghost')
+    expect(screen.queryByRole('link', { name: /Schedule a Call/i })).not.toBeInTheDocument()
+  })
+
   it('renders every service card with image, description, and specific CTA', () => {
     render(<Home />)
 
@@ -30,6 +38,7 @@ describe('Focus on Free homepage visual polish', () => {
       'href',
       'mailto:info@focus-on-free.com'
     )
+    expect(screen.getAllByRole('link', { name: /Book a Walk and Talk/i })[1]).toHaveClass('primary')
     expect(screen.queryByTitle(/appointment/i)).not.toBeInTheDocument()
   })
 })
