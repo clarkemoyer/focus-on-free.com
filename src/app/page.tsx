@@ -1,5 +1,8 @@
 import { assetPath } from '@/lib/assetPath'
 
+const WALK_AND_TALK_BOOKING_URL =
+  'https://outlook.office.com/bookwithme/user/6a2b9209a2654d8e9f83499a2218eec3@moyermanagement.com?anonymous&ismsaljsauthenabled&ep=plink'
+
 const services = [
   {
     title: 'Technology Consulting',
@@ -82,8 +85,8 @@ export default function Home() {
               improvements worth planning next.
             </p>
             <div className="button-row">
-              <a className="button primary" href="#contact">
-                Schedule a Call
+              <a className="button primary" href={WALK_AND_TALK_BOOKING_URL}>
+                Book a Walk and Talk
               </a>
               <a className="button ghost" href="#about">
                 Learn About Us
@@ -147,11 +150,11 @@ export default function Home() {
               practical, low-cost options before you commit budget to tools or vendors.
             </p>
             <div className="contact-actions">
-              <a className="button primary" href="mailto:info@focus-on-free.com">
-                Email Focus on Free
+              <a className="button primary" href={WALK_AND_TALK_BOOKING_URL}>
+                Book a Walk and Talk
               </a>
-              <a className="button ghost dark" href="#services">
-                Compare Services
+              <a className="button ghost dark" href="mailto:info@focus-on-free.com">
+                Email Focus on Free
               </a>
             </div>
             <p className="privacy-note">
