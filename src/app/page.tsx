@@ -49,8 +49,8 @@ export default function Home() {
             </a>
           </div>
         </section>
-        <section id="services" className="section">
-          <h3>Main Content</h3>
+        <section id="services" className="section services-section">
+          <h3>Independent IT Advisory Services</h3>
           <div className="service-grid">
             <article>
               <img
